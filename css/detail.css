@@ -1,0 +1,373 @@
+/*详情页detail.html私有的CSS*/
+
+#category{
+	display:none;
+}
+.category-wrapper:hover #category{
+	display:block;
+}
+/*侧边栏导航样式重置start*/
+.aside-bar{
+	left:50%;
+	margin-left:500px;
+}
+/*侧边栏导航样式重置end*/
+
+/*面包屑导航start*/
+.breadcrumb{
+	height:38px;
+	border-bottom:1px solid #eee;
+	line-height:38px;
+	font-size:12px;
+}
+.breadcrumb a{
+	color:#333;
+	cursor:pointer;
+}
+.breadcrumb a:hover{
+	color:#2BB8AA;
+	text-decoration:underline;
+}
+.breadcrumb span{
+	margin-left: 6px;
+	margin-right: 8px;
+}
+/*面包屑导航end*/
+
+/*标题部分start*/
+.detail-title{
+	font-size: 28px;
+	font-weight: bold;
+	color:#333333;
+	line-height: 38px;
+	margin-top: 5px;
+}
+.detail-subtitle{
+	font-size: 16px;
+	margin-top:4px;
+	padding-bottom: 15px;
+}
+/*标题部分end*/
+/*主体部分start*/
+.detail-summary{
+	height: 385px;
+}
+#banner{
+	width:460px;
+	height:385px;
+	// background-color:pink;
+}
+#banner .img-wrapper{
+	position:relative;
+}
+#banner .img-wrapper span{
+	width:40px;
+	height:50px;
+	background-position:0 -25px;
+	opacity:0.4;
+	filter:alpha(opacity=40);
+	cursor:pointer;
+	position:absolute;
+	top:50%;
+	margin-top:-25px;
+	left:0px;
+	display:none;
+}
+// #banner .img-wrapper:hover span{
+// 	display:block;
+// }
+#banner .img-wrapper span.right-btn{
+	background-position:0 -100px;
+	left:auto;
+	right:0px;
+}
+#banner ol{
+	margin-top:14px;
+}
+#banner ol li{
+	
+	float:left;
+	margin-right:10px;
+}
+#banner ol li.no-margin{
+	margin-right:0px;
+}
+#banner ol li img.cur{
+	border-color:#2BB8A1;
+}
+#banner ol li img{
+	width:78px;
+	height:45px;
+	border: 1px solid #eee;
+	padding: 2px;
+	cursor:pointer;
+}
+/*主体部分end*/
+
+/*商品详情部分start*/
+.detail{
+	width: 702px;
+	float:left;
+	display:inline;
+}
+.user-others{
+	border-top:1px solid #EEEEEE;
+	margin-bottom:50px;
+}
+.detail-nav-wrapper{
+	height: 43px;
+}
+.detail-nav-wrapper ul{
+	height:41px;
+	border: 1px solid #EEEEEE;
+	border-left: 0 none;
+	background-color: #F9F9F9;
+}
+.detail-nav-wrapper li{
+	width: 139px;
+	height:41px;
+	border-left:1px solid #eee;
+	float: left;
+	display:inline;
+	text-align: center;
+	line-height: 41px;
+	cursor:pointer;
+}
+.detail-nav-wrapper li.hit{
+	float: right;
+	border:0 none;
+	cursor:default;
+}
+.detail-nav-wrapper li.hit a{
+	background-color: #fb7411;
+	width: 67px;
+	height: 25px;
+	display:block;
+	text-align: center;
+	line-height: 25px;
+	color:white;
+	margin-top: 7px;
+	margin-right: 10px;
+	font-size: 12px;
+	float: right;
+	display:none;
+}
+.detail-nav-wrapper li.cur{
+	background: #2BB8AA;
+	color:white;
+	font-weight: bold;
+}
+.detail-nav-wrapper ul.on{
+	width:980px;
+	position:fixed;
+	top:0;
+	border-top:2px solid #2BB8AA;
+	z-index:98;
+}
+.detail-nav-wrapper ul.on li.hit a{
+	display:block;
+}
+.detail h2{
+	height: 27px;
+	padding-top:30px;
+	padding-bottom:2px;
+	border-bottom:2px solid #777777;
+	color:#333;
+	font-weight: bold;
+	font-size: 18px;
+}
+/*商品详情部分end*/
+
+/*消费评价start*/
+.comment-summary{
+	height: 131px;
+	padding-top: 16px;
+	padding-bottom: 13px;
+}
+.comment-summary-left{
+	width:332px;
+	height: 116px;
+	border-right:1px solid #EFEFEF;
+	text-align:center;
+	padding-top: 15px;
+}
+.comment-summary-left h4{
+	font-weight:bold;
+	margin-bottom: -3px;
+}
+.comment-summary-left h4 strong{
+	color:#f26128;
+	font-size: 30px;
+	font-weight: bold;
+	margin-right:3px;
+}
+.comment-summary-left span.large-silver-star{
+	width:80px;
+	height:16px;
+	display:inline-block;
+	background-image:url("../images/silver-star-big.png");
+	
+}
+.comment-summary-left span.large-golden-star{
+	width:60px;
+	height:16px;
+	display:block;
+	background-image:url("../images/golden-star-big.png");
+}
+.comment-summary-left p{
+	margin-top:10px;
+}
+.comment-summary-left p b{
+	color:#f26128;
+	margin-left: 4px;
+	margin-right: 4px;
+
+}
+.comment-summary ul{
+	width: 256px;
+	margin-left: 84px;
+	margin-top: 17px;
+}
+.comment-summary ul li i{
+	font-style:normal;
+	color:#999;
+}
+.total-point{
+	width:100px;
+	height:12px;
+	display:inline-block;
+	background-color:#FFEBD8;
+	margin-left:7px;
+	margin-right:7px;
+}
+.total-point span{
+	height:12px;
+	background-color: #fc9e58;
+	display:block;
+}
+.comment-title{
+	height:32px;
+	background-color:#F9F9F9;
+	line-height:32px;
+	font-size:12px;
+}
+.comment-title a{
+	float:left;/*浮动后的元素呈现行内块的显示模式，而且不受行高和空格影响*/
+	width:93px;
+	height:32px;
+	border-right:1px solid #EFEFEF;
+	text-align:center;
+	color:#333;
+}
+.comment-title a.cur{
+	background-color:#EEEEEE;
+}
+.comment-title a:hover{
+	background-color:#EEEEEE;
+}
+.comment-title select{
+	-webkit-appearance:none;
+	width:80px;
+	height:19px;
+	margin-right:10px;
+	color:#6C6C6C;
+	padding-left:8px;
+	background: url('../images/select.png') no-repeat;
+	background-position:66px center;
+}
+.comment-list{
+	padding-top:10px;
+	font-size:12px;;
+}
+.comment-list li{
+	min-height:108px;
+	padding-top:10px;
+	padding-bottom:4px;
+	border-bottom:1px dotted #ccc;
+	border-bottom:1px dotted blue;
+	overflow:hidden;
+}
+.comment-list .comment-user{
+	width:110px;
+	text-align:center;
+}
+.comment-list .comment-user img{
+	width:50px;
+}
+.comment-list .comment-user p{
+	width:81px;
+	overflow:hidden;
+	white-space:nowrap;
+	text-overflow:ellipsis;
+	margin-left:auto;
+	margin-right:auto;
+	margin-top: 10px;
+	margin-bottom: 3px;
+}
+.comment-list .comment-user span{
+	width:15px;
+	height:15px;
+	display:block;
+	margin-left:auto;
+	margin-right:auto;
+}
+.level0{
+	background-position: 0 -119px;
+}
+.level1{
+	background-position: 0 -136px;
+}
+.level2{
+	background-position: 0 -153px;
+}
+.level3{
+	background-position: 0 -170px;
+}
+.level4{
+	background-position: 0 -187px;
+}
+.level5{
+	background-position: 0 -204px;
+}
+.level6{
+	background-position: 0 -221px;
+}
+.comment-content{
+	width:581px;
+}
+.comment-content .comment-timer{
+	color:#999;
+}
+.comment-content .comment-timer .silver-star{
+	margin-right:12px;
+}
+.comment-content p{
+	color:#272727;
+	margin-top: 10px;
+	margin-bottom: 13px;
+}
+.comment-xiaotu i{
+	font-style:normal;
+	width:100px;
+	height:100px;
+	display:inline-block;
+	overflow:hidden;
+	border:2px solid transparent;
+	margin-right:8px;
+
+}
+.comment-xiaotu i:hover{
+	border-color:#F76120;
+}
+.comment-xiaotu i.cur{
+	border-color:#F76120;
+}
+.comment-xiaotu i img{
+	min-width:100%;
+	min-height:100%;
+}
+.comment-content h6{
+	background: url('../images/pic-bg.png');
+	text-align: center;
+}
+/*消费评价end*/

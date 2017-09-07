@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="../css/common.css">
+	<link rel="stylesheet" href="../css/index.css">
+	<script src="../js/function.js"></script>
+	<style>
+		#banner{
+			width:689px;
+			height:318px; 
+			position:relative;
+			overflow:hidden;
+
+			border:10px solid #000;
+			margin:100px auto 0;
+		}
+		#banner ul{
+			width:500%;
+			height:100%;
+			position:absolute;
+			top:0;
+			left:0px;
+		}
+		#banner ul li{
+			float:left;
+			width:20%;
+			height:100%;
+			display:inline;
+			white-space:nowrap;
+			overflow:hidden;
+
+		}
+		#banner ul li img{
+			border-right:1px solid #eee;
+		}
+		#banner span{
+			width:30px;
+			height:39px;
+			background-image:url('../images/slider.png');
+			background-position:0 -150px;
+			position:absolute;
+			top:50%;
+			left:0px;
+			margin-top:-20px;
+			cursor:pointer;
+			color:#fff;
+			display:none;
+			font-size: 20px;
+			line-height: 39px;
+			text-indent: 4px;
+		}
+		#banner span.right-btn{
+			width:60px;
+			
+			background-position:0 -228px;
+			right:0px;
+			left:auto;
+			
+		}
+	</style>
+	<script>
+		addEvent(window,"load",function(){
+			var index=0;
+			var banner=document.getElementById('banner');
+			var banner_spans=banner.getElementsByTagName("span");
+			var banner_ul=banner.getElementsByTagName("ul")[0];
+			var banner_ul_lis=banner.getElementsByTagName("li");
+			var timer;
+
+			//当页面加载完毕的时候，判断图片的组数，并且显示在向后按钮中
+			banner_spans[1].innerHTML=(index+1)+'/'+banner_ul_lis.length;
+			
+			
+			//当鼠标移上焦点图的时候，显示向前和向后按钮
+			//当鼠标移上焦点图的时候，停止图片的自动播放
+			addEvent(banner,"mouseover",function(){
+				for(var i=0;i<banner_spans.length;i++){
+					banner_spans[i].style.display="block";
+				}
+				clearInterval(timer);
+			});
+
+			//当鼠标离开焦点图的时候，隐藏向前和向后按钮
+			//当鼠标离开焦点图的时候，每隔三秒，播放下一组图片
+			addEvent(banner,"mouseout",function(){
+				for(var i=0;i<banner_spans.length;i++){
+					banner_spans[i].style.display="none";
+				}
+				timer=setInterval(function(){
+					banner_spans[1].click();
+				},3000);
+			});
+
+			//当单击向后按钮的时候，播放下一组图片
+			addEvent(banner_spans[1],"click",function(){
+				index++;
+				if(index>=banner_ul_lis.length){
+					index=0;
+				}
+				move(banner_ul,-index*689);
+				// banner_ul.style.left='-'+(index*689)+'px';
+				banner_spans[1].innerHTML=(index+1)+"/"+banner_ul_lis.length;
+			});
+			//当单击向前按钮的时候，播放上一组图片
+			addEvent(banner_spans[0],"click",function(){
+				index--;
+				if(index<0){
+					index=4;
+				}
+				move(banner_ul,-index*689);
+				// banner_ul.style.left='-'+(index*689)+'px';
+				banner_spans[1].innerHTML=(index+1)+"/"+banner_ul_lis.length;
+			});
+
+			//每隔三秒(3000毫秒)，自动播放下一组图片:每隔三秒，自动单击向后按钮
+			timer=setInterval(function(){
+				banner_spans[1].click();
+			},3000);
+		
+		});
+	</script>
+</head>
+<body>
+	<div id="banner">   <!--banner表示可以看到的视野范围-->
+		<ul>
+			<li>
+				<img src="../images/banner/1.1.jpg" alt=""><img src="../images/banner/1.2.jpg" alt="">
+			</li>   <!--li表示一组图片-->
+			<li>
+				<img src="../images/banner/2.1.jpg" alt=""><img src="../images/banner/2.2.jpg" alt="">
+			</li>   <!--li表示一组图片-->
+			<li>
+				<img src="../images/banner/3.1.jpg" alt=""><img src="../images/banner/3.2.jpg" alt="">
+			</li>   <!--li表示一组图片-->
+			<li>
+				<img src="../images/banner/4.1.jpg" alt=""><img src="../images/banner/4.2.jpg" alt="">
+			</li>   <!--li表示一组图片-->
+			<li>
+				<img src="../images/banner/5.1.jpg" alt=""><img src="../images/banner/5.2.jpg" alt="">
+			</li>   <!--li表示一组图片-->
+		</ul>
+		<span></span><span class="right-btn"></span>
+	</div>
+</body>
+</html>

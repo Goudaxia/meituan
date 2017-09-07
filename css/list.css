@@ -1,0 +1,170 @@
+/*列表页list.html私有的CSS*/
+
+#category{
+	display:none;
+}
+.category-wrapper:hover #category{
+	display:block;
+}
+/*侧边栏导航样式重置start*/
+.aside-bar{
+	left:50%;
+	margin-left:500px;
+}
+/*侧边栏导航样式重置end*/
+
+/*列表页广告start*/
+.list-ad{
+	margin-top:10px;
+	position:relative;
+
+}
+.list-ad img{
+	width:978px;
+	height:180px;
+	border:1px solid #eee;
+
+}
+.list-ad span{
+	position:absolute;
+	top:0px;
+	right:4px;
+	color:#2bad86;
+	font-size:20px;
+	cursor:pointer;
+}
+.list-ad span:hover{
+	color:#2e515c;
+}
+/*列表页广告end*/
+.list-main{
+	overflow:hidden;
+}
+.goods-list{
+	width: 714px;
+	float: left;
+	display:inline;
+}
+.list-right{
+	width:240px;
+}
+/*商品列表选项start */
+
+.list-title{
+	height:29px;
+	border:1px solid #eee;
+	margin-top:8px;
+	margin-bottom:8px;
+	font-size:12px;
+	line-height:27px;
+}
+.list-title a{
+	color:#333;
+}
+.list-title li{
+	float:left;
+	border-right:1px solid #ddd;
+	border-top:2px solid transparent;
+	height:27px;
+	position:relative;
+}
+.list-title li.on{
+	border-top-color:#2BB8AA;
+}
+.list-title ul li a{
+	height:27px;
+	display:block;
+	padding:0 26px;
+}
+.list-title ul li:hover a{
+	color:#2BB8AA;
+}
+.list-title ul li.default a{
+	padding-left:18px;
+	padding-right:18px;
+}
+.list-title ul li a span{
+	width:7px;
+	height:8px;
+	position:absolute;
+	top:10px;
+	right:14px;
+}
+.list-title ul li a span.down{
+	background-position:0 -820px;
+}
+.list-title ul li.on a span.down{
+	background-position:0 -810px;
+}
+.list-title ul li:hover a span.down{
+	background-position:0 -810px;
+}
+.list-title ul li a span.up{
+	background-position:0 -21px;
+}
+.list-title ul li.on a span.up{
+	background-position:0 -11px;
+}
+.list-title ul li:hover a span.up{
+	background-position:0 -11px;
+}
+.list-title ul li i{
+	font-style: normal;
+	width:0;
+	height:0;
+	border:4px solid transparent;
+	border-top-color:#999;
+	position:absolute;
+	top:12px;
+	right:16px;
+}
+.list-title ul li.active i{
+	border-top-color:transparent;
+	border-bottom-color:#2BB8AA;
+	top:8px;
+}
+#price-range ul{
+	position:absolute;
+	top:27px;
+	left:0px;
+	right:0px;
+	background-color:#fff;
+	border:1px solid #ddd;
+	border-top:0 none;
+	margin-left:-1px;
+	margin-right:-1px;
+	padding-top:4px;
+	padding-bottom:4px;
+	display:none;
+}
+#price-range.active ul{
+	display:block;
+
+}
+#price-range li{
+	border:0 none;
+	float:none;
+	text-align:center;
+}
+#price-range li a{
+	padding: 0;
+	color:#333;
+}
+#price-range li:hover{
+	background-color:#eee;
+}
+#price-range li:hover a{
+	color:#2BB8AA;
+}
+.list-title div{
+	margin-left:20px;
+}
+.list-title div a{
+	background-position:-2px -98px;
+	padding-left:13px;
+	margin-right:18px;
+}
+.list-title div a.checked{
+	background-position: -2px -74px;
+}
+/*商品列表选项end */

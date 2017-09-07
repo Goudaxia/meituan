@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		#box{
+			width:100px;
+			height:100px;
+			border:1px solid #ccc;
+			position:absolute;
+			left:100px;
+			top:200px;
+		}
+	</style>
+	<script>
+	window.onload=function(){
+		var btn=document.getElementsByTagName("button")[0];
+		var box = document.getElementById('box');
+		btn.onclick=function(){
+			var init_position=box.offsetLeft;
+			var distance=500-init_position;
+			//每隔10毫秒，走一步。需要在一秒(1000毫秒)走到终点
+				//一共需要走多少步？
+			var total_nums=1000/10;
+
+			var num=0;
+			var  step=distance/total_nums;
+			//每隔10毫秒，走一步
+			var timer=setInterval(function(){
+				num++;
+				if(num>=total_nums){
+					clearInterval(timer);
+					box.style.left=500+'px';
+				}
+				box.style.left=init_position+step*num+"px";
+			},10);
+			
+		}
+	}
+	</script>
+</head>
+<body>
+	<button>运动</button>
+	<div id="box"></div>
+</body>
+</html>

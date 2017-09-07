@@ -1,0 +1,361 @@
+/*首页index.html私有的CSS*/
+
+.banxin{
+	width: 1170px;
+}
+/*主体部分start*/
+
+.main{
+	height:477px;
+}
+.main-right{
+	width:197px;
+	height:477px;
+	float:right;
+	border:1px solid #eee;
+	border-top:0 none;
+}
+.qr{
+	border-bottom:1px solid #eee;
+}
+.main-center{
+	width:689px;
+	height:477px;
+	float:right;
+	margin-right:18px;
+	margin-left:18px;
+	
+
+}
+.main-center li{
+	height:52px;
+	border-bottom:1px solid #eee;
+	color:#999;
+	font-size:12px;
+	position:relative;
+}
+.main-center li div{
+	/*border:1px solid #eee;   div的边只有鼠标移上的时候才显示，默认是不显示的*/
+	border:1px solid transparent;
+	width: 689px;
+	height: 48px;
+	line-height: 24px;
+	position:absolute;
+
+	left:-10px;
+	top:-1px;
+	/*padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 13px;
+	padding-bottom: 13px;*/
+	padding:13px 10px;
+}
+.main-center li div.on{
+	border:1px solid #eee;   /*div的边只有鼠标移上的时候才显示，默认是不显示的*/
+	background-color: #fff;
+	z-index:2;
+}
+.main-center li h2{
+	float:left;
+	
+	width:88px;
+	// background-color:pink;
+}
+.main-center li h2 span{
+	color:#f1463b;
+	font-size:16px;
+	margin-right:5px;
+}
+.main-center li p{
+	
+	float:left;
+	width:601px;
+	height:24px;
+	overflow:hidden;
+}
+.main-center li div.on p{
+	height:48px;
+}
+.main-center li p a{
+	margin-right:20px;
+	display:inline-block;
+}
+.main-center .more{
+	position:absolute;
+	top:14px;
+	right:10px;
+	border:1px solid #eee;
+	width: 42px;
+	height: 20px;
+	line-height:20px;
+	text-align:center;
+	margin-right:0;
+}
+.main-center .more i{
+	width:0;
+	height:0;
+	border:3px solid transparent;
+	border-top-color:#666666;
+	display:inline-block;
+	margin-left:2px;
+}
+.main-center .more:hover i{
+	border-top-color:#2bb8aa;
+}
+#banner{
+	width:689px;
+	height:318px; 
+	position:relative;
+	overflow:hidden;
+
+	
+}
+#banner ul{
+	width:500%;
+	height:100%;
+	position:absolute;
+	top:0;
+	left:0px;
+}
+#banner ul li{
+	float:left;
+	width:20%;
+	height:100%;
+	display:inline;
+	white-space:nowrap;
+	overflow:hidden;
+
+}
+#banner ul li img{
+	border-right:1px solid #eee;
+}
+#banner span{
+	width:30px;
+	height:39px;
+	background-image:url('../images/slider.png');
+	background-position:0 -150px;
+	position:absolute;
+	top:50%;
+	left:0px;
+	margin-top:-20px;
+	cursor:pointer;
+	color:#fff;
+	display:none;
+	font-size: 20px;
+	line-height: 39px;
+	text-indent: 4px;
+}
+#banner span.right-btn{
+	width:60px;
+	
+	background-position:0 -228px;
+	right:0px;
+	left:auto;
+	
+}
+/*主体部分end*/
+
+
+/*各分类推荐商品start*/
+.section-title{
+	height:42px;
+
+	padding-top:30px;
+}
+.section-title h3 span{
+	background-image:url("../images/category-list-bg.png");
+	background-repeat:no-repeat;
+	width:38px;
+	height:29px;
+	display:inline-block;
+	color:#fff;
+	font-size:20px;
+	text-indent:8px;
+	margin-right:8px;
+}
+.section-title h3 a{
+	font-size:20px;
+
+}
+.section-title li{
+	float:left;
+	font-size:12px;
+	border-right:1px solid #DDDDDD;
+}
+.section-title li a{
+	padding-left:12px;
+	padding-right:12px;
+}
+.section-title li.all{
+	border:0 none;
+	margin-left:16px;
+}
+.section{
+	border-top:1px solid #EEEEEE;
+	border-right:1px solid #EEEEEE;
+	overflow:hidden;
+}
+.section img{
+	width:260px;
+	height:154px;
+}
+.section li{
+	width:261px;
+	height:299px;
+	border-left:1px solid #eee;
+	border-bottom:1px solid #eee;
+	float:left;
+	display:inline;
+	padding:12px 15px 0;
+
+}
+.section li h4{
+	
+	font-weight:bold;
+	margin-top:15px;
+	margin-bottom:3px;
+}
+.section li a:hover h4{
+	color:#333333;
+}
+.section li p{
+	width:261px;
+	overflow:hidden;
+	white-space:nowrap;
+	color:#999;
+}
+.section li a:hover p{
+	color:#333333;
+}
+.section li h5{
+	font-size:12px;
+	color:#999999;
+	border-bottom:1px dotted  #dddddd;
+	margin-top:3px;
+	padding-bottom:6px;
+}
+.section li h5 strong{
+	color:#f76120;
+	font-size:20px;
+	margin-right:5px;
+}
+
+.section li h5 b{
+	font-weight:normal;
+	text-align:right;
+	float:right;
+	margin-top:10px;
+}
+.section h6{
+	float:right;
+	color:#999;
+	font-size:12px;
+	margin-top:8px;
+}
+.section h6 a{
+	color:#999999;
+}
+.section h6 a:hover{
+	color:#2bb8aa;
+}
+.section h6 .silver-star{
+	margin-right: 8px;
+}
+.section-footer{
+	heoght:48px;
+	line-height:48px;
+	text-align:center;
+	background-color:#F6F6F6;
+	border:1px solid #eee;
+	margin-top:-1px;
+}
+/*各分类推荐商品end*/
+
+
+/*名店抢购start*/
+#brand-section img{
+	width:233px;
+	height:260px;
+}
+#brand-section{
+	border:1px solid #eee;
+	border-left:0 none;
+}
+#brand-section li{
+	width: 232px;
+	border-bottom:0 none;
+	border-left:1px solid #eee;
+	padding:0;
+	height:auto;
+}
+#brand-title{
+	margin-bottom:3px;
+}
+#brand-title h3 span{
+	width:36px;
+	height:40px;
+	background-position:0 -321px;
+}
+#brand-title h3 strong{
+	display:inline-block;
+	vertical-align:top;
+	padding-top:6px;
+}
+#brand-title div{
+	width:213px;
+	height:29px;
+	border:1px solid #eee;
+	margin-left:5px;
+	position:relative;
+	padding:6px;
+
+}
+#brand-title div del{
+	width:0;
+	height:0;
+	border:5px solid transparent;
+	border-right-color:#eee;
+	position:absolute;
+	top:15px;
+	left:-11px;
+}
+#brand-title div s{
+	width:0;
+	height:0;
+	border:5px solid transparent;
+	border-right-color:#fff;
+	position:absolute;
+	top:15px;
+	left:-10px;
+}
+#brand-title div b{
+	width:49px;
+	height:28px;
+	display:inline-block;
+	background-position:0 -470px;
+	margin-right:8px;
+}
+#brand-title div i{
+	font-style:normal;
+	width:20px;
+	height:28px;
+	display:inline-block;
+	vertical-align:top;
+	text-align:center;
+	line-height:28px;
+	color:#fff;
+	background-position:0 -82px;
+	font-size: 18px;
+	margin-right:-2px;
+}
+#brand-title div em{
+	width:2px;
+	height:11px;
+	display:inline-block;
+	background-position:0 -363px;
+	vertical-align:top;
+	margin-top:9px;
+	margin-left:3px;
+}
+/*名店抢购end*/
+
